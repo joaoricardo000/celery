@@ -9,7 +9,7 @@
     :depth: 1
 
 The Celery library must be instantiated before use, this instance
-is called an application (or *app* for short).
+is called an happlication (or *app* for short).
 
 The application is thread-safe so that multiple Celery applications
 with different configurations, components and tasks can co-exist in the
@@ -478,7 +478,7 @@ chain breaks:
         from celery.task import task
 
         @task(queue='hipri')
-        def hello(x):
+        def hello(to):
             return 'hello {0}'.format(to)
 
 Abstract Tasks
